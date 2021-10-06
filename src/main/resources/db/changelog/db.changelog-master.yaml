@@ -1,0 +1,10 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: creation-user
+      author: jose.luiz
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: sqls/creation-user.sql
+            relativeToChangelogFile: true

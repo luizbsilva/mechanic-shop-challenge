@@ -1,0 +1,51 @@
+####### SPRING #######
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  flyway:
+    enabled: false
+
+####### SERVER #######
+server:
+  port: 8080
+  max-http-header-size: 65536
+
+####### LOGS #######
+logging:
+  file:
+    max-size: 10MB
+    max-history: 2
+  pattern:
+    dateformat: dd/MM/yyyy HH:mm:ss.SSS
+
+challenge:
+  security:
+    jwt:
+      secret: _@POE&L3tF?65O9j4z&L5!nU2B!eT65_
+      expiration: 604800
+
+
+feign:
+  rest:
+    swfilme:
+      name: filme
+      url: https://swapi.dev/
+    swpeople:
+      name: people
+      url: https://swapi.dev/
+    swplanets:
+      name: planets
+      url: https://swapi.dev/
+    swspecies:
+      name: species
+      url: https://swapi.dev/
+    swsstartships:
+      name: startships
+      url: https://swapi.dev/
+    swsvehicles:
+      name: vehicles
+      url: https://swapi.dev/

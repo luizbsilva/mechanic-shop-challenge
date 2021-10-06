@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/challenge
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    tomcat:
+      max-active: 10
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        use_sql_comments: true
+        format_sql: true
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+
+challenge:
+  schedules-ativos: false
+  ambiente:
+    dev: true
